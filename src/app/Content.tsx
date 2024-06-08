@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/card';
 import { IUser } from './entities/IUser';
 import { Badge } from '@/components/ui/badge';
+import { Progress } from '@/components/ui/progress';
 import { useToast } from '@/components/ui/use-toast';
 
 export default function Content() {
@@ -57,7 +58,7 @@ export default function Content() {
       dataLength={users.length}
       next={fetchUsers}
       hasMore={hasMore}
-      loader={<h4 className="mt-4 text-center">Loading...</h4>}
+      loader={<Progress className="mt-4" />}
     >
       <div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 ">
         {users.map((user) => (
