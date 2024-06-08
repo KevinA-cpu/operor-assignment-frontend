@@ -39,6 +39,7 @@ export default function Content() {
         });
       }
     } catch (error: any) {
+      console.log(error);
       toast({
         variant: 'destructive',
         title: 'Uh oh! Something went wrong.',
