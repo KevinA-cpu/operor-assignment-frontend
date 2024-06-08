@@ -18,7 +18,7 @@ const Progress = React.forwardRef<
           clearInterval(interval);
           return 100;
         }
-        return oldValue + 1;
+        return oldValue + 20;
       });
     }, 100); // Adjust the time here to control the speed of the progress bar
 

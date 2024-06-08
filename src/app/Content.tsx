@@ -58,7 +58,7 @@ export default function Content() {
       dataLength={users.length}
       next={fetchUsers}
       hasMore={hasMore}
-      loader={<Progress className="mt-4" />}
+      loader={<Progress className="mt-4 w-full" />}
     >
       <div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 ">
         {users.map((user) => (
