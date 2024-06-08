@@ -22,7 +22,10 @@ export default function Content() {
   const fetchUsers = async () => {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}?offset=${page}&limit=10`
+        `${process.env.NEXT_PUBLIC_API_URL}?offset=${page}&limit=10`,
+        {
+          credentials: 'include',
+        }
       );
       const newUsers: IUser[] = await res.json();
       setUsers([...users, ...newUsers]);
